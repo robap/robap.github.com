@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Freezer Frog</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  </head>
+  <body>
+    <h1>Freezer Frog</h1>
+    
+    
+<h2><a href="/2009/10/26/pillow-a-php-zillow-library.html.html">Pillow - A PHP Zillow Library</a></h2>
+<p>
+  For those familiar with the 
+  <a href="http://www.zillow.com/howto/api/APIOverview.htm">
+    zillow api network</a>, getting started may seem a daunting task. I’ve 
+    recently published <a href="http://github.com/robap/pillow">pillow</a>
+    – a library aimed at making php development with zillow easier.
+</p>
+<h4>Get a Zillow Web Services Id</h4>
+<p>
+  If you haven’t done so already, get your Zillow web services Id 
+  <a href="http://www.zillow.com/webservice/Registration.htm">here</a>.
+</p>
+<h4>Download and Extract Pillow</h4>
+<ol>
+  <li>Get the latest <a href="http://github.com/robap/pillow/tarball/master">
+      tarball</a> or <a href="http://github.com/robap/pillow/zipball/master">
+        zipfile</a>.
+  </li>
+  <li>Extract.</li>
+  <pre>
+    $ wget http://github.com/robap/pillow/tarball/master
+    $ tar -zxvf robap-pillow-3cc404a.tar.gz
+  </pre>
+</ol>
+
+<h4>Set UP a Test File</h4>
+<pre>
+//save as test_pillow.php
+require '/path/to/pillow/lib/pillow.php';
+
+$zws_id = 'your zws id';
+
+$factory = new Pillow_Factory( $zws_id );
+
+$address = '1405 W Golf Course Rd';
+$csz = 'midland, tx';
+
+$property = $factory->findExactProperty($address, $csz, TRUE);
+
+print_r($property);
+</pre>
+<h4>Run It</h4>
+<pre>
+$php test_pillow.php
+</pre>
+<p>
+  You should see the returned Pillow_Property object and all of the 
+  object properties you can access. The Pillow_Property object has 
+  methods available to get comps and charts. Future versions of Pillow 
+  will contain methods for all of Zillow’s api calls.
+</p>
+<em>Posted on 26 October 2009.</em>
+
+  </body>
+</html>
