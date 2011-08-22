@@ -8,3 +8,15 @@ I recently had to build a new development system. I wanted to document the hardw
 |_. Description |_. Product |_. Price |
 | Motherboard | Micro ATX w/AM3 CPU socket MSI GF615-P31 $54.99 – $10.00 mail-in rebate | $44.99 |
 | CPU | AMD Athlon II Dual-cor 3.1GHz | $61.99 |
+| Memory | 2GB DDR3 | $27.99 |
+| Case | Cooler Master Elite 343 | $39.99 |
+| Power Supply | Cooler Master Extreme Power 460w | $39.99 |
+| HDD | Seagate 1TB Serial ATA HD | $59.99 |
+| Video Card | NVIDIA GeForce EVGA 210 $49.99 – $30.00 mail-in rebate | $19.99 |
+| Monitor | Viewsonic VX2450WM-LED 24-Inch | $179.99 |
+| OS | Ubuntu 11.04 64-bit | $0.00 |
+| | | $474.92 |
+
+The additional video card was not really necessary since the motherboard has one onboard. I chose to get one so that I could at some point support two monitors. I haven’t done this yet but will report on my results when I do. I did mail in and actually receive the rebates for the motherboard and video card. I already had a keyboard and mouse. Since I installed Ubuntu from a usb flash drive, I did not need a cd/dvd drive.
+
+While this hardware configuration is not the best or fastest, I am very happy with it’s performance as a web development system.
