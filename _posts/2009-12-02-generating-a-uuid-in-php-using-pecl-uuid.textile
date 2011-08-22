@@ -1,0 +1,62 @@
+---
+layout:   default
+title:    Generating a UUID in PHP using pecl uuid
+category: php
+---
+
+I’ve recently been investigating the use of "Universally Unique Identifiers (uuid)":http://en.wikipedia.org/wiki/Universally_Unique_Identifier with PHP. A suprising google search for "php uuid":http://www.google.com/search?q=php+uuid yields the php function uniqid() which does not produce a uuid at all. I searched further and found no shortage of PHP classes and functions which will generate uuid’s. This is likely due to the fact that there are no core functions built into PHP to handle uuid generation.
+
+I did manage to find a "uuid pecl extension":http://pecl.php.net/package/uuid that seems to work well.
+
+h4. Ubuntu Install
+
+{% highlight bash %}
+sudo apt-get install uuid-dev
+sudo pecl install uuid
+{% endhighlight %}
+
+h4. Basic Usage
+
+{% highlight php %}
+$uuid = uuid_create();
+echo $uuid;
+
+$uuid_bin = uuid_parse( $uuid );
+{% endhighlight %}
+
+I could not find any documentation which lists or describes the functions provided by the extension. Digging through the source code yielded this list of functions:
+
+Generate a new uuid
+string *uuid_create* ( [ int $uuid_type ] )
+valid parameters: UUID_TYPE_DEFAULT, UUID_TYPE_TIME, UUID_TYPE_RANDOM
+
+Check if a given uuid string is valid
+bool *uuid_is_valid* ( string $uuid )
+
+Compare two uuid strings
+int *uuid_compare* ( string $uuid1, string $uuid2 )
+
+Check if a *uuid string* is the null 00000000-0000-0000-0000-000000000000
+bool uuid_is_null ( string $uuid )
+
+Get the uuid’s type
+int *uuid_type* ( string $uuid )
+
+Get the uuid’s variant
+int *uuid_variant* ( string $uuid )
+
+Extract the creation time from a time based uuid as unix timestamp
+int *uuid_time* ( string $uuid )
+
+Get the uuid creator mac address
+string *uuid_mac* ( string $uuid )
+
+Convert *uuid string* to binary
+string uuid_parse ( string $uuid )
+
+Convert *uuid binary* to string
+string uuid_unparse ( string $uuid )
+
+h4. php5-uuid?
+
+Through apt-get, there is a package named php5-uuid. Prior to installing the pecl package, I did try php5-uuid but was met with “Warning: uuid_create() expects exactly 1 parameter” when trying to use it. There is a description of this problem and the two packages "here":http://codingforums.com/showthread.php?t=89152. I decided to avoid the fuss and use the pecl package.
