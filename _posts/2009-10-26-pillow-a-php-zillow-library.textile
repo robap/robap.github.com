@@ -1,0 +1,47 @@
+---
+layout: default
+title: Pillow - A PHP Zillow Library
+tags: PHP, Zillow
+---
+
+For those familiar with the "zillow api network":http://www.zillow.com/howto/api/APIOverview.htm, getting started may seem a daunting task. I’ve recently published "pillow":http://github.com/robap/pillow – a library aimed at making php development with zillow easier.
+
+h4. Get a Zillow Web Services Id
+
+If you haven’t done so already, get your "Zillow web services Id here":http://www.zillow.com/webservice/Registration.htm.
+
+h4. Download and Extract Pillow
+
+# Get the latest "tarball":http://github.com/robap/pillow/tarball/master or "zipfile":http://github.com/robap/pillow/zipball/master
+# Extract.
+
+{% highlight bash %}
+  wget http://github.com/robap/pillow/tarball/master
+  tar -zxvf robap-pillow-3cc404a.tar.gz
+{% endhighlight %}
+
+h4. Set UP a Test File
+
+{% highlight php %}
+//save as test_pillow.php
+require '/path/to/pillow/lib/pillow.php';
+
+$zws_id = 'your zws id';
+
+$factory = new Pillow_Factory( $zws_id );
+
+$address = '1405 W Golf Course Rd';
+$csz = 'midland, tx';
+
+$property = $factory->findExactProperty($address, $csz, TRUE);
+
+print_r($property);
+{% endhighlight %}
+
+h4. Run It
+
+{% highlight bash %}
+php test_pillow.php
+{% endhighlight %}
+
+You should see the returned Pillow_Property object and all of the object properties you can access. The Pillow_Property object has methods available to get comps and charts. Future versions of Pillow will contain methods for all of Zillow’s api calls.
