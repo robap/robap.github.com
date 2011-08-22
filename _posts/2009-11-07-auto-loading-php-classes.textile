@@ -1,0 +1,83 @@
+---
+layout:   default
+title:    Auto loading php classes
+category: php
+---
+
+Tired of long lists of require/include statements to include class files? You can set up your code to automatically load classes when you call them. This feature is available in PHP5. There are a few different ways you can go about it though.
+
+h4. Defining an __autoload function
+
+Probably the easiest way to set up autoloading is to define your own __autoload function.
+
+{% highlight php %}
+function __autoload( $class_name )
+{
+    require_once $class_name . '.php';
+}
+{% endhighlight %}
+
+Whenever PHP encounters a class name that is not already defined, it will look for your defined __autoload function, call it, and pass the name of the class to it. But what if your classes exist it multiple directories? You could write a slightly longer __autoload function. Let’s say you had classes in two different directories: lib1/ and lib2/.
+
+{% highlight php %}
+function __autoload( $class_name )
+{
+    $file = $class_name . '.php';
+    $dirs = array( 'lib1/', 'lib2/');
+
+    foreach( $dirs as $dir )
+    {
+        if( file_exists($dir . $file) )
+        {
+            require_once $dir . $file;
+            return;
+        }
+    }
+}
+{% endhighlight %}
+
+This is a bit better. But now you have to maintain a list of lib directories inside the __autoload function. PHP offers another way to autoload classes: "spl_autoload_register()":http://php.net/manual/en/function.spl-autoload-register.php. This allows you to define your own autoload function without naming it __autoload and you can also create as many of these functions as you need.
+
+{% highlight php %}
+function load_one( $class_name )
+{
+    $file = 'lib1/' . $class_name . '.php';
+
+    if( file_exists($file) )
+    {
+        require_once $file;
+    }
+
+}
+
+function load_two( $class_name )
+{
+    $file = 'lib2/' . $class_name . '.php';
+
+    if( file_exists($file) )
+    {
+        require_once $file;
+    }
+}
+
+spl_autoload_register( 'load_one' );
+spl_autoload_register( 'load_two' );
+{% endhighlight %}
+
+But this results in redundant code and the paths are still maintained inside the functions. If you want to set the autoload paths but encapsulate the dirty work, something else is needed. I created a class to address these problems. You can download it here.
+
+h4. Using AutoLoader
+
+{% highlight php %}
+//Unfortunately, AutoLoader can't auto load itself
+require '/path/to/AutoLoader.php';
+
+$auto_loader = new AutoLoader;
+$auto_loader->registerDirectory('lib1/');
+$auto_loader->registerDirectory('lib2/');
+
+$foo = new Foo;
+$bar = new Bar;
+{% endhighlight %}
+
+You still manage your autoload directories, but you do not have to fiddle inside functions to do so. And, you don’t have to maintain multiple autoload functions. There are a few downsides to this approach. In general, any autoloading is going to cost you some performance. Also, if your list of directories set with the registerDirectory method is long, I would imagine performance may suffer.
