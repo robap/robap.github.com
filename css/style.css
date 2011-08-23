@@ -204,7 +204,7 @@ table { border-collapse: collapse; border-spacing: 0; }
 #container {
   margin: 0 auto;
   width: 850px;
-  
+  position: relative;
   padding-top: 20px;
   color: #666666;
 }
@@ -245,6 +245,12 @@ footer {
   margin-bottom: 10px;
   text-align: center;
   font-size: 75%;
+}
+
+header .links {
+  position: absolute;
+  right: 0;
+  top: 10px;
 }
 
 /* =============================================================================
