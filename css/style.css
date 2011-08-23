@@ -203,8 +203,8 @@ table { border-collapse: collapse; border-spacing: 0; }
 
 #container {
   margin: 0 auto;
-  width: 80%;
-  position: relative;
+  width: 850px;
+  
   padding-top: 20px;
   color: #666666;
 }
@@ -217,20 +217,19 @@ header h1 {
   
 }
 
-#main, #side {
-  position: absolute;
+#main {
+  width: 75%;
+  float: left;
 }
 
 #side {
-  width: 25%;
+  width: 24%;
   height: 100px;
   border: 1px solid black;
-  right: 0;
+  float: right;
 }
 
-#main {
-  width: 75%;
-}
+
 
 .post h2 a {
   color: #196f1b;
@@ -240,7 +239,13 @@ header h1 {
   
 }
 
-
+footer {
+  clear: both;
+  padding-top: 20px;
+  margin-bottom: 10px;
+  text-align: center;
+  font-size: 75%;
+}
 
 /* =============================================================================
    Non-semantic helper classes
