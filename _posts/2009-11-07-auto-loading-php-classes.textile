@@ -1,5 +1,5 @@
 ---
-layout:   default
+layout:   post
 title:    Auto loading php classes
 category: php
 ---

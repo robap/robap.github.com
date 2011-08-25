@@ -1,5 +1,5 @@
 ---
-layout:   default
+layout:   post
 title:    Generating a UUID in PHP using pecl uuid
 category: php
 ---
