@@ -1,7 +1,6 @@
 ---
 layout:   post
 title:    Zillow/Google Mashup using PHP
-category: php
 ---
 
 Zillow.com provides home valuation data and makes it available through their "various api calls":http://www.zillow.com/howto/api/APIOverview.htm. I recently wrote about "Pillow – a PHP Zillow library":http://freezerfrog.com/2009/10/pillow-a-php-zillow-library/ you can use to interface with Zillow. Now, I’ve created a simple live demo using Pillow. It’s mashed with Google’s Maps api and Street View api. I tossed in a bit of "jQuery UI":http://jqueryui.com/ and here is the result:

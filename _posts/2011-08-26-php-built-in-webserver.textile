@@ -1,7 +1,6 @@
 ---
 layout: post
 title: PHP Built-in Web Server
-tags: PHP
 ---
 
 When it comes to setting up your PHP dev environment, you know the drill. Google for a LAMP/WAMP tutorial and then run through the installation steps: apache, php, mysql. Then, after setting up/checking out your project's source code, you have to configure an apache vhost file. Well the day is getting close when we can cross the apache step off the list. I recently came across "Built-in web server":http://php.net/manual/en/features.commandline.webserver.php and took it for a test drive.

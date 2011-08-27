@@ -1,7 +1,6 @@
 ---
 layout:   post
 title:    Auto loading php classes
-category: php
 ---
 
 Tired of long lists of require/include statements to include class files? You can set up your code to automatically load classes when you call them. This feature is available in PHP5. There are a few different ways you can go about it though.
