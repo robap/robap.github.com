@@ -229,14 +229,16 @@ header h1 {
   float: right;
 }
 
-
-
 .post h2 a {
   color: #196f1b;
 }
 
 .post {
   
+}
+
+pre.prettyprint {
+  background-color: #f1f1f1;
 }
 
 footer {
