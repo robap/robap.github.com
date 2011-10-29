@@ -15,4 +15,4 @@ Click the ‘street view’ link:
 
 !/images/zillow/zillgoog_3.png!
 
-You can see the "live demo here":http://zillgoog.pagodabox.com/ and you can download the "source code for the demo here":http://github.com/robap/zillgoog.
+You can see the "live demo here":http://zillgoog.newpagodabox.com/ and you can download the "source code for the demo here":http://github.com/robap/zillgoog.

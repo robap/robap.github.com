@@ -211,6 +211,8 @@ table { border-collapse: collapse; border-spacing: 0; }
 
 header h1 {
   margin: 0;
+  color: #006310;
+  font-size: 30px;
 }
 
 #content-wrapper {
@@ -230,11 +232,14 @@ header h1 {
 }
 
 .post h2 a {
-  color: #196f1b;
+  color: #ff7200;
+  text-decoration: none;
 }
 
 .post {
-  
+  border-bottom: 1px dashed #ccc;
+  padding: 5px;
+  margin-bottom: 25px;
 }
 
 pre.prettyprint {
