@@ -9,19 +9,11 @@ I did manage to find a "uuid pecl extension":http://pecl.php.net/package/uuid th
 
 h4. Ubuntu Install
 
-{% highlight bash %}
-sudo apt-get install uuid-dev
-sudo pecl install uuid
-{% endhighlight %}
+<script src="http://gist.github.com/1342946.js?file=uuid_pecl_ubuntu_install.sh"></script>
 
 h4. Basic Usage
 
-{% highlight php %}
-$uuid = uuid_create();
-echo $uuid;
-
-$uuid_bin = uuid_parse( $uuid );
-{% endhighlight %}
+<script src="http://gist.github.com/1342950.js?file=basic_uuid_pecl_usage.php"></script>
 
 I could not find any documentation which lists or describes the functions provided by the extension. Digging through the source code yielded this list of functions:
 
