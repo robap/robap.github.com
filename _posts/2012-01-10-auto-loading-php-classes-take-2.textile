@@ -7,7 +7,7 @@ My "previous post":/2009/11/07/auto-loading-php-classes.html<notextile>
 </notextile>describing auto loading classes in php, is getting a bit out-dated.<notextile> 
 </notextile>Since then, some folks have gotten together to help standardize class loading<notextile> 
 </notextile>resulting in "PSR-0":https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-0.md<notextile>.
-</notextile>Here is sample implementation:
+</notextile>Here is their sample implementation:
 
 <script src="https://gist.github.com/221634.js?file=SplClassLoader.php"></script>
 
