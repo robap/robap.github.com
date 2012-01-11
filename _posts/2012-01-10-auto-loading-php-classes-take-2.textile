@@ -1,0 +1,18 @@
+---
+layout:   post
+title:    Auto loading php classes take two
+---
+
+My "previous post":/2009/11/07/auto-loading-php-classes.html<notextile> 
+</notextile>describing auto loading classes in php, is getting a bit out-dated.<notextile> 
+</notextile>Since then, some folks have gotten together to help standardize class loading<notextile> 
+</notextile>resulting in "PSR-0":https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-0.md<notextile>.
+</notextile>Here is sample implementation:
+
+<script src="https://gist.github.com/221634.js?file=SplClassLoader.php"></script>
+
+It works quite well and can work with the old-style psuedo namespaces too. Here is an example of how to use it:
+
+<script src="https://gist.github.com/1592498.js?file=gistfile1.aw"></script>
+
+If you are still using php's __autoload function or some other method of autoloading classes, I highly recommend switching to a PSR-0 compliant autoloader.
