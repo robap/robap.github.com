@@ -4,7 +4,7 @@ title:    Generating a UUID in PHP using pecl uuid
 ---
 
 I’ve recently been investigating the use of "Universally Unique Identifiers (uuid)":http://en.wikipedia.org/wiki/Universally_Unique_Identifier with PHP. A suprising google search for "php uuid":http://www.google.com/search?q=php+uuid yields the php function uniqid() which does not produce a uuid at all. I searched further and found no shortage of PHP classes and functions which will generate uuid’s. This is likely due to the fact that there are no core functions built into PHP to handle uuid generation.
-
+<!--break-->
 I did manage to find a "uuid pecl extension":http://pecl.php.net/package/uuid that seems to work well.
 
 h4. Ubuntu Install

@@ -1,5 +1,8 @@
-title: Freezer Frog
-description: PHP, Javascript, and other things that interest me
+title: Rob Apodaca
+description: Thoughts about code and other things that interest me
 lsi: false
 paginate: 3
-pygments: true
+highlighter: pygments
+sass:
+    sass_dir: _sass
+    style: compressed

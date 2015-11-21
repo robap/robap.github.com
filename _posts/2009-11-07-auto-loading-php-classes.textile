@@ -6,7 +6,7 @@ title:    Auto loading php classes
 h4. Edit: Don't do it this way. See my new "post":/2012/01/10/auto-loading-php-classes-take-2.html
 
 Tired of long lists of require/include statements to include class files? You can set up your code to automatically load classes when you call them. This feature is available in PHP5. There are a few different ways you can go about it though.
-
+<!--break-->
 h4. Defining an __autoload function
 
 Probably the easiest way to set up autoloading is to define your own __autoload function.

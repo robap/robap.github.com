@@ -4,7 +4,7 @@ title: Pillow - A PHP Zillow Library
 ---
 
 For those familiar with the "zillow api network":http://www.zillow.com/howto/api/APIOverview.htm, getting started may seem a daunting task. I’ve recently published "pillow":http://github.com/robap/pillow – a library aimed at making php development with zillow easier.
-
+<!--break-->
 h4. Get a Zillow Web Services Id
 
 If you haven’t done so already, get your "Zillow web services Id here":http://www.zillow.com/webservice/Registration.htm.

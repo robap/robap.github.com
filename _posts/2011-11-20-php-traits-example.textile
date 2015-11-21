@@ -4,6 +4,7 @@ title: PHP Traits Example
 ---
 
 The upcoming release of php 5.4 introduces <a href="http://php.net/manual/en/language.oop5.traits.php">traits</a>. 
+<!--break-->
 This example adds a getObjectId method to a class:
 
 <script src="https://gist.github.com/1380847.js?file=object_id_php_traits.php"></script>

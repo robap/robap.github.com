@@ -8,7 +8,7 @@ My "previous post":/2009/11/07/auto-loading-php-classes.html<notextile>
 </notextile>Since then, some folks have gotten together to help standardize class loading<notextile> 
 </notextile>resulting in "PSR-0":https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-0.md<notextile>.
 </notextile>Here is their sample implementation:
-
+<!--break-->
 <script src="https://gist.github.com/221634.js?file=SplClassLoader.php"></script>
 
 It works quite well and can work with the old-style psuedo namespaces too. Here is an example of how to use it:

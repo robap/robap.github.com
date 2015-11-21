@@ -1,0 +1,22 @@
+$font-size-root: 16px !default;
+$font-family-base: 'Open Sans', sans-serif !default;
+$font-size-base: 1rem !default;
+
+$line-height: 1.5 !default;
+
+
+/* pallete */
+$color-camarone: #00581B;	// Main Primary color */
+$color-eucalyptus: #268D45;
+$color-jewel: #11722E;
+$color-crusoe: #003C12;
+$color-deep-fir: #00200A;
+$color-white: #ffffff;
+
+$body-color: $color-deep-fir;
+$body-bg: $color-white;
+
+$link-color: $color-eucalyptus;
+$link-decoration: none;
+$link-hover-color: $color-eucalyptus;
+$link-hover-decoration: underline;

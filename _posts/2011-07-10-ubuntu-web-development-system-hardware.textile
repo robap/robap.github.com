@@ -3,6 +3,7 @@ layout:   post
 title:    Ubuntu Web Development System Hardware
 ---
 I recently had to build a new development system. I wanted to document the hardware I chose since I am running Ubuntu and was not sure if my hardware choices would work.
+<!--break-->
 
 |_. Description |_. Product |_. Price |
 | Motherboard | Micro ATX w/AM3 CPU socket MSI GF615-P31 $54.99 – $10.00 mail-in rebate | $44.99 |

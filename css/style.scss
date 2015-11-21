@@ -1,0 +1,156 @@
+---
+# Front matter comment to ensure Jekyll properly reads file.
+---
+
+@import "normalize";
+@import "variables";
+@import "reboot";
+@import "layout";
+
+html, body {
+    height: 100%;
+}
+
+.layout-main {
+    @include layout-vertical;
+    height: 100%;
+    -webkit-overflow-scrolling: touch;
+    
+    &>header {
+        @include layout-auto;
+    }
+    
+    &>.content {
+        @include layout-1;
+        padding: 0 2.5em;
+        
+        overflow-y: auto;
+        
+        @media only screen and (min-width: 768px) {
+            max-width: 750px;
+            margin: auto;
+        }
+    }
+    
+    &>footer {
+        @include layout-auto;
+    }
+}
+
+header {
+    @include layout-horizontal;
+    background-color: $color-camarone;
+    color: $color-white;
+    
+    a {
+        text-decoration: none;
+        color: $color-white;
+        &:hover, &:focus {
+            text-decoration: none;
+            color: $color-white;
+        }
+    }
+    
+    &>.brand {
+        @include layout-1;
+        padding: .2rem 1rem;
+        
+        .title {
+            margin: 0;
+            padding: 0;
+            font-size: 2rem;
+            
+            @media only screen and (max-width: 768px) {
+                font-size: 1rem;
+            }
+        }
+        .description {
+            margin: 0;
+            padding: 0;
+            font-size: .7rem;
+            
+            @media only screen and (max-width: 768px) {
+                display: none;
+            }
+        }
+    }
+    
+    &>ul.link-list {
+        @include layout-horizontal;
+        @include layout-center-align;
+        margin-left: auto;
+        margin-bottom: 0;
+        font-size: 2rem;
+        list-style: none;
+            
+        &>li {
+            display: inline-block;
+            margin: 0 .8rem;
+            
+            @media only screen and (max-width: 768px) {
+                margin: 0 1rem;
+            }
+        }
+        
+        @media only screen and (max-width: 768px) {
+            font-size: 1rem;
+        }
+    }
+}
+
+footer {
+    @include layout-horizontal;
+    @include layout-center-align;
+    font-size: .7rem;
+    background-color: $color-camarone;
+    color: $color-white;
+}
+
+.post > .post-header {
+    @include layout-horizontal;
+    color: $color-jewel;
+    & a {
+        color: $color-jewel;
+    }
+    
+    &>.post-title {
+        @include layout-1;
+        font-size: 2.2rem;
+    }
+    &>.post-date {
+        @include layout-auto;
+        margin-left: auto;
+        padding-left: 1.5em;
+        font-size: .8rem;
+        align-self: flex-end;
+    }
+}
+
+.post > .post-comment-summary {
+    font-style: italic;
+    font-size: 1rem;
+}
+
+.post.summary {
+    margin-top: .5em;
+    margin-bottom: 3em;
+}
+
+.post table {
+    td, th {
+        padding: .2rem .4rem;
+    }
+    
+    th {
+        font-weight: bolder;
+    }
+}
+
+.read-more {
+    font-style: italic;
+    font-size: .8rem;
+}
+
+.pagination {
+    text-align: center;
+}
