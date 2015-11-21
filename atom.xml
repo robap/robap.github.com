@@ -18,7 +18,7 @@ layout: null
     <title>{{ post.title }}</title>
     <link href="http://robap.github.io/{{ post.url }}"/>
     <updated>{{post.date | date_to_xmlschema }}</updated>
-    <id>http://robap.github.io/{{ post.id }}</id>
+    <id>http://robap.github.io{{ post.id }}</id>
     <content type="html">{{ post.content | xml_escape }}</content>
   </entry>
   {% endfor %}
